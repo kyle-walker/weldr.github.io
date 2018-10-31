@@ -13,9 +13,8 @@ partition layout, and include cloud-init.
 
 ## Prerequisites
 
-We'll use [Fedora 29](https://getfedora.org/) as our OS of choice for running this. Run
-this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
-[Lorax](http://weldr.io/lorax/) makes some changes to the operating system its running on.
+Run this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
+[Lorax](https://weldr.io/lorax/) makes some changes to the operating system its running on.
 
 First install Composer:
 
@@ -39,8 +38,20 @@ If you're going to use [Cockpit](https://cockpit-project.org/) UI to drive Compo
 
 Install the [AWS client](https://aws.amazon.com/cli/) tooling:
 
+Fedora 29+
+
     $ sudo yum install python3-pip
     $ sudo pip3 install awscli
+
+RHEL 7.6+
+
+    $ sudo subscription-manager repos --enable rhel-server-rhscl-7-rpms
+    $ sudo yum install rh-python36-python-pip -y
+    $ sudo scl enable rh-python36 -- pip install awscli
+    $ scl enable rh-python36 bash
+
+Note, with RHEL 7.6 systems, any aws commands following will need to be issued within the
+scl enable wrapper.
 
 Make sure you have an *Access Key ID* configured in
 [AWS IAM account manager](https://aws.amazon.com/iam/) and use that info to configure
