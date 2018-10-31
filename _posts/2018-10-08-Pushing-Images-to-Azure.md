@@ -14,9 +14,8 @@ include the necessary agents, as well as
 
 ## Prerequisites
 
-We'll use [Fedora 29](https://getfedora.org/) as our OS of choice for running this. Run
-this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
-[Lorax](http://weldr.io/lorax/) makes some changes to the operating system its running on.
+Run this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
+[Lorax](https://weldr.io/lorax/) makes some changes to the operating system its running on.
 
 First install Composer:
 
@@ -41,7 +40,7 @@ If you're going to use [Cockpit](https://cockpit-project.org/) UI to drive Compo
 Install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-yum) tooling:
 
     $ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-    $ sudo sh -c 'echo -e "[azure-cli]\nname=Azure CLI\nbaseurl=https://packages.microsoft.com/yumrepos/azure-cli\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+    $ sudo yum-config-manager --add-repo=https://packages.microsoft.com/yumrepos/azure-cli
     $ sudo yum install azure-cli
 
 Now log into the Azure CLI like so:
