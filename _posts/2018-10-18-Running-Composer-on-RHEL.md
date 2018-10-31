@@ -8,7 +8,7 @@ tags: welder-web lorax-composer
 ---
 
 Weldr aka. Composer can generate custom images suitable for deploying systems, or as
-images ready to upload the cloud. It works great on Fedora, but on Red Hat Enterpise Linux
+images ready to upload the cloud. It works great on Fedora, but on Red Hat Enterprise Linux
 there's an additional wrinkle.
 
 Composer uses [Anaconda](https://fedoraproject.org/wiki/Anaconda) and [Lorax](https://weldr.io/lorax/)
@@ -24,9 +24,9 @@ repositories locally and use that as a source of content for Composer.
 
 We'll use [RHEL 7.5](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/7.5_release_notes/index)
  as our version of Red Hat Enterprise Linux for running this document. Make sure to have at
-least 50 gigabytes of disk space to run this. Due to the way [Lorax](http://weldr.io/lorax/) works
+least 50 gigabytes of disk space to run this. Due to the way [Lorax](https://weldr.io/lorax/) works
 it make changes to the operating system its running on, so don't use this system for
-other tasks:
+other tasks. It may be beneficial to deploy [Lorax](https://weldr.io/lorax) in an ephemeral virtual machine.:
 
 Make sure your system is subscribed:
 
