@@ -13,9 +13,8 @@ layout, and include cloud-init.
 
 ## Prerequisites
 
-We'll use [Fedora 29](https://getfedora.org/) as our OS of choice for running this. Run
-this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
-[Lorax](http://weldr.io/lorax/) makes some changes to the operating system its running on.
+Run this in its own VM with at least 8 gigabytes of memory and 40 gigabytes of disk space.
+[Lorax](https://weldr.io/lorax/) makes some changes to the operating system its running on.
 
 First install Composer:
 
